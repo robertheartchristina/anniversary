@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Anniversary, Christina | November 4, 2017</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+	<style>
+		section {
+		  padding: 100px 0;
+		}
+		
+		html, body {
+		  overflow-x: hidden;
+		}
+		
+		body {
+		  font-family: 'Roboto';
+		  font-size: 17px;
+		  font-weight: 400;
+		  background-color: #eee;
+		}
+		
+		h1 {
+		  font-size: 200%;
+		  text-transform: uppercase;
+		  letter-spacing: 3px;
+		  font-weight: 400;
+		}
+		
+		header {
+		  background: #3F51B5;
+		  color: #FFFFFF;
+		  padding: 150px 0;
+		}
+		header p {
+		  font-family: 'Allura';
+		  color: rgba(255, 255, 255, 0.2);
+		  margin-bottom: 0;
+		  font-size: 60px;
+		  margin-top: -30px;
+		}
+		
+		.timeline {
+		  position: relative;
+		}
+		.timeline::before {
+		  content: '';
+		  background: #C5CAE9;
+		  width: 5px;
+		  height: 95%;
+		  position: absolute;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		.timeline-item {
+		  width: 100%;
+		  margin-bottom: 70px;
+		}
+		.timeline-item:nth-child(even) .timeline-content {
+		  float: right;
+		  padding: 40px 30px 10px 30px;
+		}
+		.timeline-item:nth-child(even) .timeline-content .date {
+		  right: auto;
+		  left: 0;
+		}
+		.timeline-item:nth-child(even) .timeline-content::after {
+		  content: '';
+		  position: absolute;
+		  border-style: solid;
+		  width: 0;
+		  height: 0;
+		  top: 30px;
+		  left: -15px;
+		  border-width: 10px 15px 10px 0;
+		  border-color: transparent #f5f5f5 transparent transparent;
+		}
+		.timeline-item::after {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
+		
+		.timeline-content {
+		  position: relative;
+		  width: 45%;
+		  padding: 10px 30px;
+		  border-radius: 4px;
+		  background: #f5f5f5;
+		  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+		}
+		.timeline-content::after {
+		  content: '';
+		  position: absolute;
+		  border-style: solid;
+		  width: 0;
+		  height: 0;
+		  top: 30px;
+		  right: -15px;
+		  border-width: 10px 0 10px 15px;
+		  border-color: transparent transparent transparent #f5f5f5;
+		}
+		
+		.timeline-img {
+		  width: 30px;
+		  height: 30px;
+		  background: #3F51B5;
+		  border-radius: 50%;
+		  position: absolute;
+		  left: 50%;
+		  margin-top: 25px;
+		  margin-left: -15px;
+		}
+		
+		a {
+		  color: #FF4081;
+		  font-size: inherit;
+		  text-decoration: underline;
+		}
+		a:hover, a:active, a:focus {
+		  color: #FF4081;
+		  text-decoration: none;
+		}
+		
+		.timeline-card {
+		  padding: 0 !important;
+		}
+		.timeline-card p {
+		  padding: 0 20px 10px;
+		}
+		
+		.timeline-img-header { height: 400px; position: relative; margin-bottom: 20px; background-size: cover !important; }
+		
+		
+		
+		.boston1 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("boston-05282016.jpg") center center no-repeat; height: 350px; }
+		.mmambassador { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("makers-mark-07032015.jpg") center center no-repeat; height: 340px; }
+		.vdaylc { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("lincoln-center-02142015.jpg") center center no-repeat; height: 340px; }
+		.ncwedding { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("north-carolina-05302015.jpg") center center no-repeat; height: 340px; }
+		.ac { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("atlantic-city-12062014.jpg") center center no-repeat; }
+		.roller { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("rollerderby-04112015.jpg") center center no-repeat; height: 640px;} 
+		.fish { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("larry-david-04172015.jpg") center center no-repeat; height: 640px;} 
+		.engagement { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("engagement-11082015.jpg") center center no-repeat; height: 440px;}  
+		.bluekiss { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("blue-kiss-11262015.jpg") center center no-repeat; height: 340px; }
+		.haight { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("haight-ashbury-12242015.JPG") center center no-repeat; }
+		.snow { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("snow-01232016.jpg") center center no-repeat; height: 450px; } 
+		.seven { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("7train-05232016.jpg") center center no-repeat; height: 450px; } 
+		.taxi { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("taxicab-06182016.jpg") center center no-repeat; height: 450px; } 
+		.funhome { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("cerveris-07152016.jpg") center center no-repeat; } 
+		.gtrain { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("gtrain-09022016.jpg") center center no-repeat; height: 400px; }
+		.yum { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("yum-yum-10072016.jpg") center center no-repeat; }
+		.paris1 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("le-royal-opera-11102016.jpg") center center no-repeat; height: 590px; }
+		.bday2017 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("bday-08252017.jpg") center center no-repeat; } 
+		.pville { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("placerville-12262015.jpg") center top no-repeat; height: 500px; }
+		.disney { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("disney-03242017.gif") center top no-repeat; height: 500px; }
+		.amelie { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("amelie-03162017.jpg") center top no-repeat; height: 500px; }
+		
+		.timeline-img-header h2 { color: #FFFFFF; position: absolute; bottom: 5px; left: 20px; }
+		
+		blockquote { margin-top: 30px; color: #757575; border-left-color: #3F51B5; padding: 0 20px; }
+		
+		.date {
+		  background: #FF4081;
+		  display: inline-block;
+		  color: #FFFFFF;
+		  padding: 10px;
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		}
+		
+		@media screen and (max-width: 768px) {
+		  .timeline::before {
+		    left: 50px;
+		  }
+		  .timeline .timeline-img {
+		    left: 50px;
+		  }
+		  .timeline .timeline-content {
+		    max-width: 100%;
+		    width: auto;
+		    margin-left: 70px;
+		  }
+		  .timeline .timeline-item:nth-child(even) .timeline-content {
+		    float: none;
+		  }
+		  .timeline .timeline-item:nth-child(odd) .timeline-content p {
+		    padding-bottom:100px !important;
+		  }
+		  .timeline .timeline-item:nth-child(odd) .timeline-content::after {
+		    content: '';
+		    position: absolute;
+		    border-style: solid;
+		    width: 0;
+		    height: 0;
+		    top: 30px;
+		    left: -15px;
+		    border-width: 10px 15px 10px 0;
+		    border-color: transparent #f5f5f5 transparent transparent;
+		  }
+		}
+			
+		</style>
+
+
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+	  <div class="container text-center">
+<!-- 	    <h1>Robert &#x2764;'s Christina</h1> -->
+		<h1>Happy Anniversary</h1>
+	    <p>A timeline of Love&hellip;</p>
+	  </div>
+	</header>
+	
+	<section class="timeline">
+	  <div class="container">
+	  
+	  
+	  
+	  	<!-- BDay 2017 -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header bday2017">
+					<h2>Upstate Antics</h2>
+	        	</div>
+				<div class="date">24 AUG 2017</div>
+				<p>It took some logistics to rent a car, book a shitty hotel and impress you with <a href="http://stormking.org/" target="_blank">Storm King</a>, a <a href="http://www.bocuserestaurant.com/" target="_blank">meal from the CIA</a>, a super long bridge and downtown Hudson - but I think I pulled it off. Happy birthday!</p>
+			</div>
+		</div>
+		
+		
+		<!-- DISNEY -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header disney">
+					<h2>Mouse Ears</h2>
+	        	</div>
+				<div class="date">24 MAR 2017</div>
+				<p>It took me a minute to figure out the vastness of Disney World, but you booked a masterful trip and I have nothing but great memories of our time at the magic kingdom. I'm ready to go back when you are&hellip;</p>
+			</div>
+		</div>
+		
+		
+		<!-- AMELIE -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header amelie">
+					<h2>Am&eacute;lie</h2>
+	        	</div>
+				<div class="date">16 MAR 2017</div>
+				<p>I was so excited to see Am&eacute;lie on Broadway, but in the words of Eliza Hamilton [Phillipa Soo] herself, "You will never be satisfied." The show <a href="http://www.playbill.com/article/amelie-starring-phillipa-soo-sets-broadway-closing-date" target="_blank">closed on May 21st</a> but I'm still super glad we saw it.</p>
+			</div>
+		</div>
+	  
+	  	
+
+		<!-- Paris1 -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header paris1">
+					<h2>Parisian Lunch</h2>
+	        	</div>
+				<div class="date">10 NOV 2016</div>
+				<p>The rain was lightly falling on a Paris afternoon as we waited for our lunch at Le Royal Opera. I love that shirt on you and you looked beautiful, so I had to capture the moment.</p>
+			</div>
+		</div>
+		
+		<!-- YumYum -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header yum">
+					<h2>YumYum Queens</h2>
+	        	</div>
+				<div class="date">7 OCT 2016</div>
+				<p>The limited bar at Yum Yum Queens was enough for us to belly up and wait for takeout. This wasn't the first time there, nor the last.</p>
+			</div>
+		</div>
+	  	
+		
+		<!-- GTRAIN -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header gtrain">
+					<h2>"Sick" Day</h2>
+	        	</div>
+				<div class="date">2 SEP 2016</div>
+				<p>I took a sick day and we toured the town, visiting the transit museum, having guac over cocktails, and walking over the Brooklyn Bridge before seeing a show. That was a good day!</p>
+			</div>
+		</div>
+		
+		<!-- TAXI -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header funhome">
+					<h2>Fun Home Paparazzi</h2>
+	        	</div>
+				<div class="date">15 JUL 2016</div>
+				<p>You knew the stars would come out after Fun Home, and were so excited to meet Michael Cerveris. I'm glad I could capture the smile on your face.</p>
+			</div>
+		</div>
+
+		<!-- TAXI -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header taxi">
+					<h2>Taxicab Confessions</h2>
+	        	</div>
+				<div class="date">18 JUN 2016</div>
+				<p>From the back of a taxicab, these smiles were headed to Manhattan, then Brooklyn. That day was Kate's going away party and the day we tried out dinner at Aurora.</p>
+			</div>
+		</div>
+		
+	
+	
+		<!-- BOSTON1 -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header boston1">
+					<h2>It's Hot in Boston</h2>
+	        	</div>
+				<div class="date">28 MAY 2016</div>
+				<p>Posing for a quick photo in front of trillions of July 4th flags, Patrice snapped this picture of us at our finest - in nature.</p>
+			</div>
+		</div>
+		
+		
+		
+		
+
+		
+		<!-- 7TRAIN -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header seven">
+					<h2>7 Train Platform</h2>
+	        	</div>
+				<div class="date">23 JUN 2016</div>
+				<p>Remember how much time we spent on the 7 train platform? Sometimes the only way to get you to smile was to pull out a camera!</p>
+			</div>
+		</div>
+		
+
+
+		<!-- SNOW -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header snow">
+					<h2>Snow Smiles</h2>
+	        	</div>
+				<div class="date">23 JAN 2016</div>
+				<p>When it drops 8 inches of show, and our small apartment starts to give us cabin fever, we bundle up and stroll around the block. This was cold, but such a good memory.</p>
+			</div>
+		</div>
+		
+		
+		
+		<!-- PVILLE -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header pville">
+					<h2>Downtown Placerville</h2>
+	        	</div>
+				<div class="date">26 DEC 2015</div>
+				<p>I made sure all the planned photos were taken, then convinced the photographer to take a picture of us in the middle of the road. Risky? Yes. We could have been run over by an old lady. Worth it? You bet.</p>
+			</div>
+		</div>
+
+		
+		<!-- HAIGHT -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header haight">
+					<h2>Haight &amp; Ashbury</h2>
+	        	</div>
+				<div class="date">22 DEC 2015</div>
+				<p>Bob and Charlayne couldn't quite understand why we wanted a picture at some random intersection, and that was captured in the 100+ photos taken, this one with mom in the background!</p>
+			</div>
+		</div>
+
+
+		<!-- BLUE KISS -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header bluekiss">
+					<h2>Blue Kiss</h2>
+	        	</div>
+				<div class="date">26 NOV 2015</div>
+				<p>When Paul &amp; Kim are in town, we're no strangers to the blue bar, sitting in front of a dozen glasses and flirting.</p>
+			</div>
+		</div>
+		
+		
+
+		
+		<!-- ENGAGEMENT -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header engagement">
+					<h2>Put a Ring on it</h2>
+	        	</div>
+				<div class="date">8 NOV 2015</div>
+				<p>While the actual event happened the night before, we returned to Central Park the next day and snapped an "official" engagement photo to share with the world.</p>
+			</div>
+		</div>
+		
+		
+		<!-- MAKERS MARK -->
+		<div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header mmambassador">
+					<h2>Mr. Ambassador</h2>
+	        	</div>
+				<div class="date">2 JULY 2015</div>
+				<p>Remember when we flew to Louisville, rented a car, drove to Loretto, bought some bottles of bourbon (that they claimed were from a special barrel) and dipped them in red wax? It may not sound like fun, but we had a great time!</p>
+			</div>
+		</div>   
+		
+		
+		
+		<!-- NORTH CAROLINA WEDDING -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header ncwedding">
+					<h2>Looking Sharp in NC</h2>
+	        	</div>
+				<div class="date">30 May 2015</div>
+				<p>When Jessica &amp; Evan invite you to witness them tie the knot in North Carolina, you cannot disappoint. Dressed to the nines, we danced, drank and celebrated with the beautiful bride and groom.</p>
+			</div>
+		</div>
+		
+		
+		
+
+
+		<!-- FISH IN THE DARK -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header fish">
+					<h2>Fish in the Dark</h2>
+	        	</div>
+				<div class="date">17 APR 2015</div>
+				<p>Jason Berta treated us to Fish in the Dark tickets with Larry David on my 34th birthday. The most memorable part? The bartender refusing to add ice to our $24 drinks because, "Larry doesn't like the sound of ice shaking around in the cup."</p>
+			</div>
+		</div>
+		
+ 
+		
+		<!-- ROLLER DERBY -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header roller">
+					<h2>Roller Derby</h2>
+	        	</div>
+				<div class="date">11 APR 2015</div>
+				<p>Did it matter that we didn't know the rules? No! Bridget and her team deserved our undying support and we showed it.</p>
+			</div>
+		</div>
+		
+		
+		
+		<!-- VALENTINES, LINCOLN CENTER -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header vdaylc">
+					<h2>Ballet @ Lincoln Center</h2>
+	        	</div>
+				<div class="date">14 FEB 2015</div>
+				<p>The stakes were raised for our second Valentine's Day celebration, and Robert was able to scoop up tickets for the ballet.</p>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		<!-- AC -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header ac">
+					<h2>Atlantic City, 4th Date</h2>
+	        	</div>
+				<div class="date">6 DEC 2014</div>
+				<p>They only had smoking rooms available at the Tropicana when we landed so late. We sang karaoke, went to an aquarium, and partied at Boogey Nights!</p>
+			</div>
+		</div>
+	
+	
+		
+		
+	
+	
+	
+	
+	
+	  	   	
+	
+	
+	
+	  </div>
+	</section>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+    <script>
+		$(function(){
+	
+	  window.sr = ScrollReveal();
+	
+	  if ($(window).width() < 768) {
+	
+	  	if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+	  		$('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+	  	}
+	
+	  	sr.reveal('.js--fadeInRight', {
+		    origin: 'right',
+		    distance: '300px',
+		    easing: 'ease-in-out',
+		    duration: 800,
+		  });
+	
+	  } else {
+	  	
+	  	sr.reveal('.js--fadeInLeft', {
+		    origin: 'left',
+		    distance: '300px',
+			  easing: 'ease-in-out',
+		    duration: 800,
+		  });
+	
+		  sr.reveal('.js--fadeInRight', {
+		    origin: 'right',
+		    distance: '300px',
+		    easing: 'ease-in-out',
+		    duration: 800,
+		  });
+	
+	  }
+	  
+	  sr.reveal('.js--fadeInLeft', {
+		    origin: 'left',
+		    distance: '300px',
+			  easing: 'ease-in-out',
+		    duration: 800,
+		  });
+	
+		  sr.reveal('.js--fadeInRight', {
+		    origin: 'right',
+		    distance: '300px',
+		    easing: 'ease-in-out',
+		    duration: 800,
+		  });
+	
+	
+	});
+	</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
