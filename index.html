@@ -60,7 +60,7 @@
 		
 		.timeline-item {
 		  width: 100%;
-		  margin-bottom: 70px;
+		  margin-bottom: -170px;
 		}
 		.timeline-item:nth-child(even) .timeline-content {
 		  float: right;
@@ -144,7 +144,7 @@
 		.vdaylc { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("lincoln-center-02142015.jpg") center center no-repeat; height: 340px; }
 		.ncwedding { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("north-carolina-05302015.jpg") center center no-repeat; height: 340px; }
 		.ac { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("atlantic-city-12062014.jpg") center center no-repeat; }
-		.roller { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("rollerderby-04112015.jpg") center center no-repeat; height: 640px;} 
+		.roller { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("rollerderby-04112015.JPG") center center no-repeat; height: 640px;} 
 		.fish { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("larry-david-04172015.jpg") center center no-repeat; height: 640px;} 
 		.engagement { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("engagement-11082015.jpg") center center no-repeat; height: 440px;}  
 		.bluekiss { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("blue-kiss-11262015.jpg") center center no-repeat; height: 340px; }
@@ -160,6 +160,11 @@
 		.pville { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("placerville-12262015.jpg") center top no-repeat; height: 500px; }
 		.disney { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("disney-03242017.gif") center top no-repeat; height: 500px; }
 		.amelie { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("amelie-03162017.jpg") center top no-repeat; height: 500px; }
+		.btrain { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("btrain-10102017.jpg") center top no-repeat; height: 350px; }
+		.eshoot { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("queens-06192016.jpg") center center no-repeat; height: 350px;}
+		.wedding { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding.jpg") center center no-repeat; height: 350px;}  
+		.wedding1 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding1.jpg") center center no-repeat; height: 350px;}
+		.wedding2 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding2.jpg") center center no-repeat; height: 350px;}  
 		
 		.timeline-img-header h2 { color: #FFFFFF; position: absolute; bottom: 5px; left: 20px; }
 		
@@ -174,25 +179,29 @@
 		  top: 0;
 		  right: 0;
 		}
+		.timeline .timeline-item:nth-child(odd) .timeline-content p {
+		    padding-bottom:20px !important;
+		  }
 		
 		@media screen and (max-width: 768px) {
 		  .timeline::before {
-		    left: 50px;
+		    left: 30px;
 		  }
 		  .timeline .timeline-img {
-		    left: 50px;
+		    left: 30px;
 		  }
+		  .timeline-item {
+			  margin-bottom: 70px;
+			}
 		  .timeline .timeline-content {
 		    max-width: 100%;
 		    width: auto;
-		    margin-left: 70px;
+		    margin-left: 50px;
 		  }
 		  .timeline .timeline-item:nth-child(even) .timeline-content {
 		    float: none;
 		  }
-		  .timeline .timeline-item:nth-child(odd) .timeline-content p {
-		    padding-bottom:100px !important;
-		  }
+		  
 		  .timeline .timeline-item:nth-child(odd) .timeline-content::after {
 		    content: '';
 		    position: absolute;
@@ -227,7 +236,19 @@
 	
 	<section class="timeline">
 	  <div class="container">
-	  
+	  	
+	  	
+	  	<!-- BTrain  -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header btrain">
+					<h2>Go to Work</h2>
+	        	</div>
+				<div class="date">10 OCT 2017</div>
+				<p>Ask anyone, they'll tell you the best coffee isn't from Cafeine or Starbucks, it's Double Dutch, iced, large. Thanks for hanging out with me in the mornings!</p>
+			</div>
+		</div>
 	  
 	  
 	  	<!-- BDay 2017 -->
@@ -246,7 +267,7 @@
 		<!-- DISNEY -->
 	    <div class="timeline-item">
 	    	<div class="timeline-img"></div>
-			<div class="timeline-content timeline-card js--fadeInRight">
+			<div class="timeline-content timeline-card js--fadeInLeft">
 	        	<div class="timeline-img-header disney">
 					<h2>Mouse Ears</h2>
 	        	</div>
@@ -281,6 +302,48 @@
 				<p>The rain was lightly falling on a Paris afternoon as we waited for our lunch at Le Royal Opera. I love that shirt on you and you looked beautiful, so I had to capture the moment.</p>
 			</div>
 		</div>
+		
+		
+		
+		
+		<!-- Wedding Dance -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header wedding2">
+					<h2>Dance Party</h2>
+	        	</div>
+				<div class="date">4 NOV 2016</div>
+				<p>We spent more time thinking about music than I did about my suit - and that was hours well spent. Our dance party lasted all night and keep even the usually timid on their feet.</p>
+			</div>
+		</div>
+		
+		
+		<!-- Wedding Walk -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header wedding1">
+					<h2>"Rice"</h2>
+	        	</div>
+				<div class="date">4 NOV 2016</div>
+				<p>I was skeptical of the "Rice" packets laid on everyone's chairs, but it turned out so magically! Look at us, what a great idea you had.</p>
+			</div>
+		</div>
+		
+		
+		<!-- First Look -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header wedding">
+					<h2>First Look</h2>
+	        	</div>
+				<div class="date">4 NOV 2016</div>
+				<p>Before 'disturbing' the L Train passengers, we had our first look at Union Square. You looked so amazing but were quickly upstaged as the rest of New York did not disappoint with crazy.</p>
+			</div>
+		</div>
+		
 		
 		<!-- YumYum -->
 	    <div class="timeline-item">
@@ -318,6 +381,20 @@
 				<p>You knew the stars would come out after Fun Home, and were so excited to meet Michael Cerveris. I'm glad I could capture the smile on your face.</p>
 			</div>
 		</div>
+		
+		
+		<!-- ENGAGEMENT SHOOT -->
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header eshoot">
+					<h2>Engagement Shoot</h2>
+	        	</div>
+				<div class="date">19 JUN 2016</div>
+				<p>We devised an unconventional narrative for our engagement shoot: us in a familiar routine (food shopping &amp; bubbly), just better dressed than usual!</p>
+			</div>
+		</div>
+		
 
 		<!-- TAXI -->
 	    <div class="timeline-item">
@@ -498,7 +575,7 @@
 					<h2>Ballet @ Lincoln Center</h2>
 	        	</div>
 				<div class="date">14 FEB 2015</div>
-				<p>The stakes were raised for our second Valentine's Day celebration, and Robert was able to scoop up tickets for the ballet.</p>
+				<p>The stakes were high for our first Valentine's Day celebration, and I was able to scoop up tickets for the ballet.</p>
 			</div>
 		</div>
 		
