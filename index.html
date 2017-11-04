@@ -39,10 +39,10 @@
 		}
 		header p {
 		  font-family: 'Allura';
-		  color: rgba(255, 255, 255, 0.2);
+		  color: rgba(255, 255, 255, 0.4);
 		  margin-bottom: 0;
 		  font-size: 60px;
-		  margin-top: -30px;
+		  margin-top: 0px;
 		}
 		
 		.timeline {
@@ -164,7 +164,9 @@
 		.eshoot { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("queens-06192016.jpg") center center no-repeat; height: 350px;}
 		.wedding { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding.jpg") center center no-repeat; height: 350px;}  
 		.wedding1 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding1.jpg") center center no-repeat; height: 350px;}
-		.wedding2 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding2.jpg") center center no-repeat; height: 350px;}  
+		.wedding2 { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("wedding2.jpg") center center no-repeat; height: 350px;}
+		.rome { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("rome-11012017.jpg") center center no-repeat; height: 350px;}
+		.florence { background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url("florence-11032017.jpg") center center no-repeat; height: 350px;}  
 		
 		.timeline-img-header h2 { color: #FFFFFF; position: absolute; bottom: 5px; left: 20px; }
 		
@@ -238,14 +240,23 @@
 			.amelie { height: 300px; }
 			.btrain { height: 240px; }
 			.eshoot { height: 250px;}
-			.wedding { height: 250px;}  
-			.wedding1 { height: 250px;}
-			.wedding2 { height: 250px;}  
+			.wedding, .wedding1, .wedding2, .rome{ height: 250px;}  
+			.florence { height: 300px;}  
+			header {padding-top: 90px; padding-bottom: 90px;}
+			header p { font-size: 45px; margin-top: 0; }
 		}
 			
 		</style>
 
 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4039977-142"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-4039977-142');
+		</script>
 
 
     <!--[if lt IE 9]>
@@ -256,7 +267,6 @@
   <body>
     <header>
 	  <div class="container text-center">
-<!-- 	    <h1>Robert &#x2764;'s Christina</h1> -->
 		<h1>Happy Anniversary</h1>
 	    <p>A timeline of Love&hellip;</p>
 	  </div>
@@ -264,6 +274,35 @@
 	
 	<section class="timeline">
 	  <div class="container">
+	  	
+	  	
+	  	
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInLeft">
+	        	<div class="timeline-img-header florence">
+					<h2>A Date with David</h2>
+	        	</div>
+				<div class="date">03 NOV 2017</div>
+				<p>An early morning train left rainy Rome and dropped us off in Florence. We had espresso, bought scarfs, ate gelato, strolled and met up with David. And when we get back home, I need to head straight to the gym.</p>
+			</div>
+		</div>
+	  
+	  
+	    <div class="timeline-item">
+	    	<div class="timeline-img"></div>
+			<div class="timeline-content timeline-card js--fadeInRight">
+	        	<div class="timeline-img-header rome">
+					<h2>Roman Holiday</h2>
+	        	</div>
+				<div class="date">01 NOV 2017</div>
+				<p>Ahead of our first anniversary we escaped off to Rome to eat pasta, see old stuff and kiss in a different time zone. Here we are stopping for some prosecco before our dinner reservation, and you looked so great!</p>
+			</div>
+		</div>
+	  	
+	  	
+	  	
+	  	
 	  	
 	  	
 	  	<!-- BTrain  -->
@@ -639,12 +678,6 @@
 	  </div>
 	</section>
 
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
@@ -703,16 +736,3 @@
 	</script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
